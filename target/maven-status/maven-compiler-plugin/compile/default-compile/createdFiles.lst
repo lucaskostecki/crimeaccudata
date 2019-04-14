@@ -1,2 +1,8 @@
+com/cityofmadison/maps/arcgis/Features.class
+controller/CrunchifyJSON.class
+com/cityofmadison/maps/arcgis/FeaturesItem.class
 CrimeAccuDataApplication.class
+com/cityofmadison/maps/arcgis/FieldsItem.class
+com/cityofmadison/maps/arcgis/Attributes.class
+com/cityofmadison/maps/arcgis/FieldAliases.class
 CanISteal.class
