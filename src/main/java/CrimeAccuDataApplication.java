@@ -6,12 +6,10 @@ import java.util.Set;
 @ApplicationPath("/")
 
 public class CrimeAccuDataApplication extends Application {
-        @Override
-        public Set<Class<?>> getClasses() {
-            HashSet h = new HashSet<Class<?>>();
-            h.add(CanISteal.class);
-            return h;
-        }
+    @Override
+    public Set<Class<?>> getClasses() {
+        HashSet h = new HashSet<Class<?>>();
+        h.add(CanISteal.class);
+        return h;
     }
-
 }
