@@ -1,2 +1,9 @@
+persistence/MoneyQuery.class
+persistence/SessionFactoryProvider.class
+com/zipcodeapi/ZipCodesItem.class
+persistence/GenericDao.class
+persistence/NearZipCode.class
 CrimeAccuDataApplication.class
+com/zipcodeapi/Results.class
+entity/Money.class
 CanISteal.class

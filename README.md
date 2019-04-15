@@ -15,4 +15,4 @@ This state of the art data service allows
 Our unique tool for determining the success rate, among other data, about looting certain areas.
 
 ## Where's the M.O.N.E.Y.?
-#### *Money. Obtained. No. Effort. Yes.*
+#### *entity.Money. Obtained. No. Effort. Yes.*
