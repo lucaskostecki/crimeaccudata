@@ -8,8 +8,12 @@
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 
         <property name="connection.username">root</property>
+<<<<<<< HEAD
 
         <property name="connection.password">student</property>
+=======
+        <property name="connection.password"></property>
+>>>>>>> master
 
         <property name="hibernate.c3p0.min_size">5</property>
         <property name="hibernate.c3p0.max_size">20</property>
@@ -17,8 +21,12 @@
         <property name="hibernate.c3p0.max_statements">50</property>
         <property name="hibernate.c3p0.idle_test_period">3000</property>
 
+<<<<<<< HEAD
         <mapping class="entity.Money"/>
 
+=======
+<!--        <mapping class="entity.UserReviews"/>-->
+>>>>>>> master
 
     </session-factory>
 
