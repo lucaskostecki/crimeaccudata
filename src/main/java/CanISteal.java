@@ -1,4 +1,6 @@
 import com.cityofmadison.maps.arcgis.Attributes;
+import com.cityofmadison.maps.arcgis.Features;
+import com.cityofmadison.maps.arcgis.FeaturesItem;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
@@ -42,8 +44,8 @@ public class CanISteal {
         ObjectMapper mapper = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
         try {
-            Attributes results = mapper.readValue(response, Attributes.class);
-            output = results.getIncidentType();
+            Features results = mapper.readValue(response, Features.class);
+            output = results.getFeatures().get(0).getAttributes().getIncidentType();
         } catch (Exception e) {
             logger.error("Issue mapping response", e);
         }
@@ -51,6 +53,6 @@ public class CanISteal {
         logger.debug(response);
         logger.debug(output);
 
-        return Response.status(200).entity(response).build();
+        return Response.status(200).entity(output).build();
     }
 }
