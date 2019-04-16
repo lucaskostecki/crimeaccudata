@@ -1,8 +1,8 @@
 package persistence;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.zipcodeapi.Results;
-import com.zipcodeapi.ZipCodesItem;
+import com.geonamesapi.PostalCodesItem;
+import com.geonamesapi.Results;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
@@ -18,15 +18,15 @@ public class NearZipCode {
 
         Client client = ClientBuilder.newClient();
         WebTarget target =
-                client.target("https://www.zipcodeapi.com/rest/VrTX2UdOP5Hpi4B86BAJbGcF7FLuBs3bUJzGa9Js2wyjpQ4Cq6n4G2vLDIIIgKvv/radius.json/"+zipCode+"/5/mile");
+                client.target("http://api.geonames.org/findNearbyPostalCodesJSON?formatted=true&postalcode=" + zipCode +"&radius=10&username=gbitzer&style=full");
         String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
 
         ObjectMapper mapper = new ObjectMapper();
         Results results = mapper.readValue(response, Results.class);
-        List<ZipCodesItem> zipCodeitems = results.getZipCodes();
+        List<PostalCodesItem> zipCodeitems = results.getPostalCodes();
 
-        for (ZipCodesItem zip : zipCodeitems){
-            nearZipCodes.add(zip.getZipCode());
+        for (PostalCodesItem zip : zipCodeitems){
+            nearZipCodes.add(zip.getPostalCode());
         }
 
 

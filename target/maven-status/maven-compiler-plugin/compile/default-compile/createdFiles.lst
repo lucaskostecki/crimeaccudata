@@ -1,19 +1,15 @@
-<<<<<<< HEAD
-persistence/MoneyQuery.class
 persistence/SessionFactoryProvider.class
-com/zipcodeapi/ZipCodesItem.class
+com/geonamesapi/PostalCodesItem.class
 persistence/GenericDao.class
-persistence/NearZipCode.class
 CrimeAccuDataApplication.class
-com/zipcodeapi/Results.class
-entity/Money.class
-=======
-com/cityofmadison/maps/arcgis/Features.class
+com/geonamesapi/Results.class
+CanISteal.class
+com/cityofmadison/maps/arcgis/FieldAliases.class
+persistence/MoneyQuery.class
 controller/CrunchifyJSON.class
+com/cityofmadison/maps/arcgis/Features.class
 com/cityofmadison/maps/arcgis/FeaturesItem.class
-CrimeAccuDataApplication.class
+persistence/NearZipCode.class
+entity/Money.class
 com/cityofmadison/maps/arcgis/FieldsItem.class
 com/cityofmadison/maps/arcgis/Attributes.class
-com/cityofmadison/maps/arcgis/FieldAliases.class
->>>>>>> master
-CanISteal.class

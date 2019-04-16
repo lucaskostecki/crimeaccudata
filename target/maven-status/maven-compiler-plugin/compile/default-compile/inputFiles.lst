@@ -1,20 +1,15 @@
-<<<<<<< HEAD
-/home/student/IdeaProjects/crimeaccudata/src/main/java/persistence/MoneyQuery.java
 /home/student/IdeaProjects/crimeaccudata/src/main/java/CrimeAccuDataApplication.java
-/home/student/IdeaProjects/crimeaccudata/src/main/java/persistence/NearZipCode.java
 /home/student/IdeaProjects/crimeaccudata/src/main/java/entity/Money.java
-/home/student/IdeaProjects/crimeaccudata/src/main/java/com/zipcodeapi/Results.java
+/home/student/IdeaProjects/crimeaccudata/src/main/java/com/geonamesapi/PostalCodesItem.java
+/home/student/IdeaProjects/crimeaccudata/src/main/java/com/cityofmadison/maps/arcgis/FieldAliases.java
+/home/student/IdeaProjects/crimeaccudata/src/main/java/com/cityofmadison/maps/arcgis/Attributes.java
+/home/student/IdeaProjects/crimeaccudata/src/main/java/controller/CrunchifyJSON.java
+/home/student/IdeaProjects/crimeaccudata/src/main/java/com/cityofmadison/maps/arcgis/FeaturesItem.java
+/home/student/IdeaProjects/crimeaccudata/src/main/java/persistence/MoneyQuery.java
+/home/student/IdeaProjects/crimeaccudata/src/main/java/com/cityofmadison/maps/arcgis/FieldsItem.java
+/home/student/IdeaProjects/crimeaccudata/src/main/java/persistence/NearZipCode.java
+/home/student/IdeaProjects/crimeaccudata/src/main/java/com/geonamesapi/Results.java
 /home/student/IdeaProjects/crimeaccudata/src/main/java/persistence/SessionFactoryProvider.java
+/home/student/IdeaProjects/crimeaccudata/src/main/java/com/cityofmadison/maps/arcgis/Features.java
 /home/student/IdeaProjects/crimeaccudata/src/main/java/CanISteal.java
 /home/student/IdeaProjects/crimeaccudata/src/main/java/persistence/GenericDao.java
-/home/student/IdeaProjects/crimeaccudata/src/main/java/com/zipcodeapi/ZipCodesItem.java
-=======
-/home/lucas/IdeaProjects/crimeaccudata/src/main/java/com/cityofmadison/maps/arcgis/Features.java
-/home/lucas/IdeaProjects/crimeaccudata/src/main/java/com/cityofmadison/maps/arcgis/FieldAliases.java
-/home/lucas/IdeaProjects/crimeaccudata/src/main/java/com/cityofmadison/maps/arcgis/FieldsItem.java
-/home/lucas/IdeaProjects/crimeaccudata/src/main/java/CrimeAccuDataApplication.java
-/home/lucas/IdeaProjects/crimeaccudata/src/main/java/controller/CrunchifyJSON.java
-/home/lucas/IdeaProjects/crimeaccudata/src/main/java/com/cityofmadison/maps/arcgis/FeaturesItem.java
-/home/lucas/IdeaProjects/crimeaccudata/src/main/java/com/cityofmadison/maps/arcgis/Attributes.java
-/home/lucas/IdeaProjects/crimeaccudata/src/main/java/CanISteal.java
->>>>>>> master
