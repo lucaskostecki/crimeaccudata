@@ -30,9 +30,10 @@ public class AmiSafeTest {
     public void testLocationToLatLngApi() {
         AmISafe safe = new AmISafe();
         List<Double> latLng;
-        latLng = safe.addressLatLong("1701 Wright St");
+        latLng = safe.convertAddressToLatLong("1701 Wright St");
         assertEquals(43.12183, latLng.get(0));
         assertEquals(-89.32792, latLng.get(1));
     }
+
 
 }
