@@ -29,10 +29,12 @@ public class AmiSafeTest {
     @Test
     public void testLocationToLatLngApi() {
         AmISafe safe = new AmISafe();
-        List<Double> latLng;
-        latLng = safe.convertAddressToLatLong("1701 Wright St");
-        assertEquals(43.12183, latLng.get(0));
-        assertEquals(-89.32792, latLng.get(1));
+
+        List<Double> test = new ArrayList<>();
+        test.add(43.12183);
+        test.add(-89.32792);
+        List<Double>  latLng = safe.convertAddressToLatLong("1701 Wright St");
+        assertEquals(test, latLng);
     }
 
 

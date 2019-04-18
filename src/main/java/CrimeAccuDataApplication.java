@@ -10,6 +10,7 @@ public class CrimeAccuDataApplication extends Application {
     public Set<Class<?>> getClasses() {
         HashSet h = new HashSet<Class<?>>();
         h.add(CanISteal.class);
+        h.add(Safe.class);
         return h;
     }
 }
