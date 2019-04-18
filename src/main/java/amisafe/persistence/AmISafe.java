@@ -35,9 +35,7 @@ public class AmISafe {
 
 
     public List<Double> convertAddressToLatLong(String currentLoc) {
-        double lat = 0;
-        double lng = 0;
-        List<Double> currentLatLong = new ArrayList<>();
+
         String address = currentLoc.trim();
         address = address.replaceAll("\\s", "%20");
 

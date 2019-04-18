@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class CrunchifyJSON {
 
@@ -20,5 +21,12 @@ public class CrunchifyJSON {
         Gson gson = builder.setPrettyPrinting().create();
 
         return gson.toJson(list);
+    }
+
+    public String mapToJson(Map map) {
+        GsonBuilder builder = new GsonBuilder();
+        Gson gson = builder.setPrettyPrinting().create();
+
+        return gson.toJson(map);
     }
 }
