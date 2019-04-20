@@ -1,1 +1,4 @@
-Persistence\AmiSafeTest.class
+persistence/MoneyQueryTest.class
+persistence/NearZipCodeTest.class
+Persistence/AmiSafeTest.class
+persistence/GenericDaoTest.class
