@@ -18,4 +18,5 @@ Our unique tool for determining the success rate, among other data, about lootin
 
 ## Where's the M.O.N.E.Y.?
 #### *Money. Obtained. No. Effort. Yes.*
-This API gives you the information you need to find the wealthiest areas!
+This API gives you the information you need to find the wealthiest areas! Enter your current zipcode and we will find the 
+wealthiest zipcodes in a 10 km radius!

@@ -1,4 +1,6 @@
 import controller.CanISteal;
+import persistence.MoneyQuery;
+
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 import java.util.HashSet;
@@ -12,6 +14,7 @@ public class CrimeAccuDataApplication extends Application {
         HashSet h = new HashSet<Class<?>>();
 
         h.add(CanISteal.class);
+        h.add(MoneyQuery.class);
         h.add(Safe.class);
         return h;
     }
