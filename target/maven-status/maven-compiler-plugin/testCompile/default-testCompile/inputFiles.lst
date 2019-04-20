@@ -1,4 +1,5 @@
-/home/student/IdeaProjects/crimeaccudata/src/test/java/persistence/NearZipCodeTest.java
-/home/student/IdeaProjects/crimeaccudata/src/test/java/persistence/GenericDaoTest.java
-/home/student/IdeaProjects/crimeaccudata/src/test/java/Persistence/AmiSafeTest.java
-/home/student/IdeaProjects/crimeaccudata/src/test/java/persistence/MoneyQueryTest.java
+/home/lucas/IdeaProjects/crimeaccudata/src/test/java/persistence/MoneyQueryTest.java
+/home/lucas/IdeaProjects/crimeaccudata/src/test/java/Persistence/AmiSafeTest.java
+/home/lucas/IdeaProjects/crimeaccudata/src/test/java/persistence/CanIStealTest.java
+/home/lucas/IdeaProjects/crimeaccudata/src/test/java/persistence/NearZipCodeTest.java
+/home/lucas/IdeaProjects/crimeaccudata/src/test/java/persistence/GenericDaoTest.java

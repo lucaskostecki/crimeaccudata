@@ -4,7 +4,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
-@Entity(name = "Review")
+@Entity(name = "entity.Review")
 @Table(name = "Reviews")
 public class Review {
 

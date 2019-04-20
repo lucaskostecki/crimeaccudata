@@ -21,29 +21,40 @@ public class CanISteal {
     private CrunchifyJSON crunchify = new CrunchifyJSON();
 
     @GET
-    @Path("/canisteal/address/{address}")
+    @Path("/address/{address}")
     @Produces("application/json")
     public Response getBusinessByAddress(@PathParam("address") String address) {
-        List<Review> reviews;
-        List<Business> businessesByID = businessDao.getByPropertyLike("businessID", address);
+        logger.debug("req: " + address);
+        address = address.replace('+', ' ');
+        logger.debug("req after: " + address);
+
+        List<Review> reviews = null;
+        List<Business> businessesByID = businessDao.getByPropertyLike("address", address);
 
         for (Business business : businessesByID) {
             String businessID = Integer.toString(business.getBusinessID());
-            reviews = reviewDao.getByPropertyLike("review", businessID);
+            reviews = reviewDao.getByProperty("review", businessID);
         }
 
-        String output = crunchify.listToJSON(resp);
+        String output = crunchify.listToJSON(reviews);
         return Response.status(200).entity(output).build();
     }
 
     @GET
-    @Path("/canisteal/name/{name}")
+    @Path("/name/{name}")
     @Produces("application/json")
     public Response getBusinessByName(@PathParam("name") String name) {
-        List<Business> businessResp = businessDao.getByPropertyLike("businessID", name);
-        List<Review> reviewResp = reviewDao.getByPropertyLike("businessID", address);
+        name = name.replace('+', ' ');
 
-        String output = crunchify.listToJSON(resp);
+        List<Review> reviews = null;
+        List<Business> businessesByID = businessDao.getByPropertyLike("name", name);
+
+        for (Business business : businessesByID) {
+            String businessID = Integer.toString(business.getBusinessID());
+            reviews = reviewDao.getByProperty("review", businessID);
+        }
+
+        String output = crunchify.listToJSON(reviews);
         return Response.status(200).entity(output).build();
     }
 }
