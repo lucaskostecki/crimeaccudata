@@ -8,13 +8,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import sun.security.pkcs11.Secmod;
-
-import javax.enterprise.inject.New;
-import javax.ws.rs.client.Client;
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.MediaType;
 
 import java.util.*;
 
@@ -36,6 +29,5 @@ public class AmiSafeTest {
         List<Double>  latLng = safe.convertAddressToLatLong("1701 Wright St");
         assertEquals(test, latLng);
     }
-
 
 }

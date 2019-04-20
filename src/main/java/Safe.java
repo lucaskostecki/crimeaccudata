@@ -1,6 +1,8 @@
 import amisafe.persistence.AmISafe;
 import controller.CrunchifyJSON;
 
+import javax.json.JsonArray;
+import javax.json.JsonObject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -21,6 +23,7 @@ public class Safe {
         String json = "";
         Map<String, String> crime = safe.crimeRadiusByAddress(address, radius);
         CrunchifyJSON crunch = new CrunchifyJSON();
+
 
 
         if(crime.size() > 0) {
