@@ -1,7 +1,6 @@
 package persistence;
 
 
-//import com.zipcodeapi.ZipCodesItem;
 import controller.CrunchifyJSON;
 import entity.Money;
 
@@ -14,39 +13,37 @@ import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.List;
 
-@Path("/money")
+/**
+ * The type Money query.
+ */
+@Path("/wheresTheMoney")
 public class MoneyQuery {
+    /**
+     * Gets money averages.
+     *
+     * @param zipCode the zip code
+     * @return the money averages
+     * @throws Exception the exception
+     */
     @GET
     @Produces("application/json")
     @Path("/{zipCode}")
     public Response getMoneyAverages(@PathParam("zipCode") String zipCode) throws Exception {
         List<String> nearZipCodes;
         String json = "";
-
-
-
         NearZipCode zipCodeRequest = new NearZipCode();
         nearZipCodes = zipCodeRequest.getNearZipCodes(zipCode);
-
         GenericDao moneyDao = new persistence.GenericDao(Money.class);
-
         CrunchifyJSON crunch = new CrunchifyJSON();
 
         List<Money> jsonObjs = new ArrayList<>();
-
         for (String zip : nearZipCodes) {
             List<Money> data = moneyDao.getByPropertyLike("zip", zip);
-
             if (data.size() > 0) {
                 jsonObjs.add(data.get(0));
             }
         }
-
-
         json = crunch.listToJSON(jsonObjs);
-
-
-
         return Response.status(200).entity(json).build();
     }
 
