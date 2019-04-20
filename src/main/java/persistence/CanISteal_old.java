@@ -1,3 +1,5 @@
+package persistence;
+
 import com.cityofmadison.maps.arcgis.Attributes;
 import com.cityofmadison.maps.arcgis.Features;
 import com.cityofmadison.maps.arcgis.FeaturesItem;

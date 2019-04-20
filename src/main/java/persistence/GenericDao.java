@@ -59,4 +59,39 @@ public class GenericDao<T> {
         return entities;
     }
 
+    public List<T> getByProperty(String propertyName, String value) {
+        Session session = getSession();
+
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<T> query = builder.createQuery( type );
+        Root<T> root = query.from( type );
+        Expression<String> propertyPath = root.get(propertyName);
+
+        query.where(builder.equal(propertyPath, value));
+
+        List<T> entities = session.createQuery( query ).getResultList();
+        session.close();
+        return entities;
+    }
+
+/*
+    public List<T> getByPropertLikeOnJoin(Class<T> class1, Class<T> class2, T comparable) {
+        Session session = getSession();
+
+        CriteriaQuery<T> query = builder.createQuery( type );
+
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        Root<T> root = query.from( type );
+        Expression<String> propertyPath = root.get(propertyName);
+
+        query.where(builder.equal(propertyPath, id));
+
+        List<T> entities = session.createQuery(query).getResultList();
+
+        session.close();
+        return entities;
+    }
+ */
+
+
 }

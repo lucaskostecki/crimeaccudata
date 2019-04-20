@@ -1,4 +1,6 @@
-import controller.CanISteal;
+package persistence;
+
+import persistence.CanISteal;
 import persistence.MoneyQuery;
 
 import javax.ws.rs.ApplicationPath;
