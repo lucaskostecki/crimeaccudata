@@ -17,8 +17,6 @@ This state of the art data service allows you to figure out if you are safe in a
 Our unique tool for determining the success rate, among other data, about looting certain areas. With user reviews available for some locations, we can help you decide where to go next.
 
 ## Where's the M.O.N.E.Y.?
-<<<<<<< HEAD
-=======
 #### *Money. Obtained. No. Effort. Yes.*
-This API gives you the information you need to find the wealthiest areas!
->>>>>>> master
+This API gives you the information you need to find the wealthiest areas! Enter your current zipcode and we will find the 
+wealthiest zipcodes in a 10 km radius!
