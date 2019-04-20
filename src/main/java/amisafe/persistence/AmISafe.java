@@ -64,7 +64,7 @@ public class AmISafe {
                 client.target("https://maps.cityofmadison.com/arcgis/rest/services/Public/OPEN_DB_TABLES/MapServer/2/query?where=UPPER%28IncidentType%29+like+%27%25ROBBERY%25%27+OR+UPPER%28IncidentType%29+like+%27%25THEFT%25%27+OR+UPPER%28IncidentType%29+like+%27%25BURGLARY%25%27&text=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=IncidentType%2C+Address%2C+IncidentDate&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=&having=&returnIdsOnly=false&returnCountOnly=false&orderByFields=IncidentDate+desc&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&historicMoment=&returnDistinctValues=false&resultOffset=&resultRecordCount=50&queryByDistance=&returnExtentOnly=false&datumTransformation=&parameterValues=&rangeValues=&quantizationParameters=&f=pjson");
         String response = target.request(MediaType.APPLICATION_JSON_TYPE).get(String.class);
         ObjectMapper mapper = new ObjectMapper();
-        Long daysAgo = System.currentTimeMillis()/1000 - 1300000;
+        Long daysAgo = System.currentTimeMillis() - 1650000000;
         Map<String, String> addressIncident = new HashMap<>();
 
         try {
@@ -73,9 +73,13 @@ public class AmISafe {
             for(int i =0; i < 25; i++) {
                 if(results.getFeatures().get(i).getAttributes().getIncidentDate() >= daysAgo) {
                     String address = results.getFeatures().get(i).getAttributes().getAddress();
+                    if(address.contains("Madison") || address.contains("Wisconsin")) {
+                        address = address.replaceAll("Madison", "");
+                        address = address.replaceAll("Wisconsin", "");
+                        address = address.replaceAll(",", "");
+                    }
                     String incidentType = results.getFeatures().get(i).getAttributes().getIncidentType();
                     addressIncident.put(address, incidentType);
-
                 }
             }
         } catch (Exception e) {
