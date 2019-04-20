@@ -17,7 +17,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Path("/canisteal")
-public class CanISteal {
+public class CanISteal_old {
     private final Logger logger = LogManager.getLogger(this.getClass());
 
     /*

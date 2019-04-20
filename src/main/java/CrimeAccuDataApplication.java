@@ -9,7 +9,7 @@ public class CrimeAccuDataApplication extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         HashSet h = new HashSet<Class<?>>();
-        h.add(CanISteal.class);
+        h.add(CanISteal_old.class);
         return h;
     }
 }
