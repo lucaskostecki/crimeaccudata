@@ -1,10 +1,5 @@
 package controller;
 
-import com.cityofmadison.maps.arcgis.Attributes;
-import com.cityofmadison.maps.arcgis.Features;
-import com.cityofmadison.maps.arcgis.FeaturesItem;
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -21,4 +16,13 @@ import javax.ws.rs.core.Response;
 @Path("/canisteal")
 public class CanISteal {
     private final Logger logger = LogManager.getLogger(this.getClass());
+
+    @GET
+    @Path("/canisteal/{address}")
+    @Produces("application/json")
+    public Response getSteal(@PathParam("address") String address) {
+
+
+        return Response.status(200).entity(output).build();
+    }
 }
