@@ -13,7 +13,7 @@ public class CrimeAccuDataApplication extends Application {
         HashSet h = new HashSet<Class<?>>();
         h.add(CanISteal.class);
         h.add(MoneyQuery.class);
-
+        h.add(Safe.class);
         return h;
     }
 }
