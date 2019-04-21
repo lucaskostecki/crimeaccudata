@@ -66,7 +66,7 @@
     </div>
 </div>
 
-<div id="wheresTheMoney" class="card offset-md-3 col-md-6"  style="padding : 0; margin-top: 5em;">
+<div id="canISteal" class="card offset-md-3 col-md-6"  style="padding : 0; margin-top: 5em;">
     <div class="card-header text-white bg-dark">
         canISteal?
     </div>
@@ -79,7 +79,7 @@
         </div>
         <div class="row">
             <input class="form-control offset-md-3 col-md-1" type="text" placeholder="Output" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
-            <input class="form-control col-md-5" type="text" placeholder="" readonly style="display:inline-block;">
+            <input class="form-control col-md-5" type="text" placeholder="??????" readonly style="display:inline-block;">
         </div>
     </div>
 </div>
