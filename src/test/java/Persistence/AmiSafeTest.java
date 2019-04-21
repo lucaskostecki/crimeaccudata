@@ -14,11 +14,17 @@ import java.util.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
+/**
+ * The type Ami safe test.
+ */
 public class AmiSafeTest {
 
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
+    /**
+     * Test location to lat lng api.
+     */
     @Test
     public void testLocationToLatLngApi() {
         AmISafe safe = new AmISafe();
