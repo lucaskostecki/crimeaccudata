@@ -59,7 +59,7 @@ public class GenericDao<T> {
         return entities;
     }
 
-    public List<T> getByProperty(String propertyName, String value) {
+    public List<T> getByID(String propertyName, int value) {
         Session session = getSession();
 
         CriteriaBuilder builder = session.getCriteriaBuilder();

@@ -1,5 +1,6 @@
 package persistence;
 
+import com.google.gson.Gson;
 import controller.CrunchifyJSON;
 import entity.Business;
 import entity.Review;
@@ -11,6 +12,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
+import java.util.ArrayList;
 import java.util.List;
 
 @Path("/canisteal")
@@ -24,19 +26,24 @@ public class CanISteal {
     @Path("/address/{address}")
     @Produces("application/json")
     public Response getBusinessByAddress(@PathParam("address") String address) {
-        logger.debug("req: " + address);
         address = address.replace('+', ' ');
-        logger.debug("req after: " + address);
 
-        List<Review> reviews = null;
+        List<Review> reviewObjs = new ArrayList<>();
+        List<String> reviews = new ArrayList<>();
         List<Business> businessesByID = businessDao.getByPropertyLike("address", address);
 
         for (Business business : businessesByID) {
-            String businessID = Integer.toString(business.getBusinessID());
-            reviews = reviewDao.getByProperty("review", businessID);
+            int businessID = business.getBusinessID();
+            reviewObjs = reviewDao.getByID("business", businessID);
         }
 
-        String output = crunchify.listToJSON(reviews);
+        for (Review reviewObj : reviewObjs) {
+            if (reviewObjs.size() > 0) {
+                reviews.add(reviewObj.getReview());
+            }
+        }
+
+        String output = crunchify.listToJSON(reviewObjs);
         return Response.status(200).entity(output).build();
     }
 
@@ -46,12 +53,19 @@ public class CanISteal {
     public Response getBusinessByName(@PathParam("name") String name) {
         name = name.replace('+', ' ');
 
-        List<Review> reviews = null;
+        List<Review> reviewObjs = new ArrayList<>();
+        List<String> reviews = new ArrayList<>();
         List<Business> businessesByID = businessDao.getByPropertyLike("name", name);
 
         for (Business business : businessesByID) {
-            String businessID = Integer.toString(business.getBusinessID());
-            reviews = reviewDao.getByProperty("review", businessID);
+            int businessID = business.getBusinessID();
+            reviewObjs = reviewDao.getByID("business", businessID);
+        }
+
+        for (Review reviewObj : reviewObjs) {
+            if (reviewObjs.size() > 0) {
+                reviews.add(reviewObj.getReview());
+            }
         }
 
         String output = crunchify.listToJSON(reviews);

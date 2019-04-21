@@ -15,7 +15,7 @@ public class Review {
 
     @ManyToOne
     @JoinColumn(name = "BusinessID")
-    private Business business;
+    private transient Business business;
 
     @Column(name = "Review")
     private String review;
@@ -59,7 +59,6 @@ public class Review {
     public String toString() {
         return "Review{" +
                 "reviewID=" + reviewID +
-                ", business=" + business +
                 ", review='" + review + '\'' +
                 ", rating=" + rating +
                 '}';
