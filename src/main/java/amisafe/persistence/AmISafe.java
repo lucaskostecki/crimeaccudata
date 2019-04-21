@@ -12,10 +12,20 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import java.util.*;
 
+/**
+ * The type Am i safe.
+ */
 public class AmISafe {
     private final Logger logger = LogManager.getLogger(this.getClass());
 
 
+    /**
+     * Crime radius by address map.
+     *
+     * @param address the address
+     * @param radius  the radius
+     * @return the map
+     */
     public Map crimeRadiusByAddress(String address, Double radius) {
         List<Double> currentLatLong = convertAddressToLatLong(address);
         Map<String, String> crimes = recentCrime();
@@ -34,6 +44,12 @@ public class AmISafe {
     }
 
 
+    /**
+     * Convert address to lat long list.
+     *
+     * @param currentLoc the current loc
+     * @return the list
+     */
     public List<Double> convertAddressToLatLong(String currentLoc) {
 
         String address = currentLoc.trim();
@@ -58,6 +74,11 @@ public class AmISafe {
         return latLngs;
     }
 
+    /**
+     * Recent crime map.
+     *
+     * @return the map
+     */
     public Map<String, String> recentCrime() {
         Client client = ClientBuilder.newClient();
         WebTarget target =
@@ -89,6 +110,15 @@ public class AmISafe {
     }
 
 
+    /**
+     * Returns distance between two lat longs.
+     *
+     * @return the distance in miles
+     * @param lat1 the first latitude
+     * @param lng1 the first longitude
+     * @param lat2 the second latitude
+     * @param lng2 the second longitude
+     */
     private double distance(double lat1, double lng1, double lat2, double lng2) {
         double earthRadius = 3958.75; // miles (or 6371.0 kilometers)
         double dLat = Math.toRadians(lat2-lat1);

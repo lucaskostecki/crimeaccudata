@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 Manifest-Version: 1.0
 Built-By: student
 Created-By: IntelliJ IDEA
 Build-Jdk: 1.8.0_144
 
+=======
+Manifest-Version: 1.0
+Built-By: dbow_
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8
+
+>>>>>>> dc3f0ad5591f215065d8f3ed39c4f083cee1af4d
