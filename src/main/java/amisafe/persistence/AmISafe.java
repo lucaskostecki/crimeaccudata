@@ -12,10 +12,20 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import java.util.*;
 
+/**
+ * The type Am i safe.
+ */
 public class AmISafe {
     private final Logger logger = LogManager.getLogger(this.getClass());
 
 
+    /**
+     * Crime radius by address map.
+     *
+     * @param address the address
+     * @param radius  the radius
+     * @return the map
+     */
     public Map crimeRadiusByAddress(String address, Double radius) {
         List<Double> currentLatLong = convertAddressToLatLong(address);
         Map<String, String> crimes = recentCrime();
@@ -34,6 +44,12 @@ public class AmISafe {
     }
 
 
+    /**
+     * Convert address to lat long list.
+     *
+     * @param currentLoc the current loc
+     * @return the list
+     */
     public List<Double> convertAddressToLatLong(String currentLoc) {
 
         String address = currentLoc.trim();
@@ -58,13 +74,18 @@ public class AmISafe {
         return latLngs;
     }
 
+    /**
+     * Recent crime map.
+     *
+     * @return the map
+     */
     public Map<String, String> recentCrime() {
         Client client = ClientBuilder.newClient();
         WebTarget target =
                 client.target("https://maps.cityofmadison.com/arcgis/rest/services/Public/OPEN_DB_TABLES/MapServer/2/query?where=UPPER%28IncidentType%29+like+%27%25ROBBERY%25%27+OR+UPPER%28IncidentType%29+like+%27%25THEFT%25%27+OR+UPPER%28IncidentType%29+like+%27%25BURGLARY%25%27&text=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=IncidentType%2C+Address%2C+IncidentDate&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=&having=&returnIdsOnly=false&returnCountOnly=false&orderByFields=IncidentDate+desc&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&historicMoment=&returnDistinctValues=false&resultOffset=&resultRecordCount=50&queryByDistance=&returnExtentOnly=false&datumTransformation=&parameterValues=&rangeValues=&quantizationParameters=&f=pjson");
         String response = target.request(MediaType.APPLICATION_JSON_TYPE).get(String.class);
         ObjectMapper mapper = new ObjectMapper();
-        Long daysAgo = System.currentTimeMillis()/1000 - 1300000;
+        Long daysAgo = System.currentTimeMillis() - 1650000000;
         Map<String, String> addressIncident = new HashMap<>();
 
         try {
@@ -73,9 +94,13 @@ public class AmISafe {
             for(int i =0; i < 25; i++) {
                 if(results.getFeatures().get(i).getAttributes().getIncidentDate() >= daysAgo) {
                     String address = results.getFeatures().get(i).getAttributes().getAddress();
+                    if(address.contains("Madison") || address.contains("Wisconsin")) {
+                        address = address.replaceAll("Madison", "");
+                        address = address.replaceAll("Wisconsin", "");
+                        address = address.replaceAll(",", "");
+                    }
                     String incidentType = results.getFeatures().get(i).getAttributes().getIncidentType();
                     addressIncident.put(address, incidentType);
-
                 }
             }
         } catch (Exception e) {
@@ -85,6 +110,15 @@ public class AmISafe {
     }
 
 
+    /**
+     * Returns distance between two lat longs.
+     *
+     * @return the distance in miles
+     * @param lat1 the first latitude
+     * @param lng1 the first longitude
+     * @param lat2 the second latitude
+     * @param lng2 the second longitude
+     */
     private double distance(double lat1, double lng1, double lat2, double lng2) {
         double earthRadius = 3958.75; // miles (or 6371.0 kilometers)
         double dLat = Math.toRadians(lat2-lat1);

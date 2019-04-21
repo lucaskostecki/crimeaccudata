@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 Manifest-Version: 1.0
 Built-By: lucas
 Created-By: Apache Maven 3.3.9
 Build-Jdk: 1.8.0_201
 
+=======
+Manifest-Version: 1.0
+Built-By: dbow_
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8
+
+>>>>>>> master

@@ -1,5 +1,5 @@
 # Crime A.C.C.U. Data
-## *All. Crime. Committed. Universally.*
+## *All. Crime. Committed. Un-universally.*
 
 ## Problem Statement
 Do you find it difficult to steal things? Do you wish you had more data about your targets? We have the data for you! Although we don't steal things, some people may find that stealing is difficult without the correct data.
@@ -17,6 +17,6 @@ This state of the art data service allows you to figure out if you are safe in a
 Our unique tool for determining the success rate, among other data, about looting certain areas. With user reviews available for some locations, we can help you decide where to go next.
 
 ## Where's the M.O.N.E.Y.?
-#### *Money. Obtained. No. Effort. Yes.*
+#### *Money. Obtained. No. Effort. Yes!.*
 This API gives you the information you need to find the wealthiest areas! Enter your current zipcode and we will find the 
 wealthiest zipcodes in a 10 km radius!
