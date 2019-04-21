@@ -1,5 +1,6 @@
 package entity;
 
+import com.google.gson.annotations.Expose;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -11,17 +12,29 @@ public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
+    @Expose()
     private int reviewID;
 
     @ManyToOne
     @JoinColumn(name = "BusinessID")
-    private transient Business business;
+    @Expose(serialize = false, deserialize = false)
+    private Business business;
 
     @Column(name = "Review")
+    @Expose()
     private String review;
 
     @Column(name = "Rating")
+    @Expose()
     private int rating;
+
+    public Review() {}
+
+    public Review(Business business, String review, int rating) {
+        this.business = business;
+        this.review = review;
+        this.rating = rating;
+    }
 
     public int getReviewID() {
         return reviewID;

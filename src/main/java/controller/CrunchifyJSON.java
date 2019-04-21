@@ -16,6 +16,13 @@ public class CrunchifyJSON {
         return gson.toJson(list);
     }
 
+    public String listToJSONStrict(List list) {
+        GsonBuilder builder = new GsonBuilder();
+        Gson gson = builder.setPrettyPrinting().excludeFieldsWithoutExposeAnnotation().create();
+
+        return gson.toJson(list);
+    }
+
     public String mapToJson(Map map) {
         GsonBuilder builder = new GsonBuilder();
         Gson gson = builder.setPrettyPrinting().create();

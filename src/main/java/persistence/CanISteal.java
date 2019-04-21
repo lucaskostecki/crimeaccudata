@@ -29,7 +29,6 @@ public class CanISteal {
         address = address.replace('+', ' ');
 
         List<Review> reviewObjs = new ArrayList<>();
-        List<String> reviews = new ArrayList<>();
         List<Business> businessesByID = businessDao.getByPropertyLike("address", address);
 
         for (Business business : businessesByID) {
@@ -37,13 +36,7 @@ public class CanISteal {
             reviewObjs = reviewDao.getByID("business", businessID);
         }
 
-        for (Review reviewObj : reviewObjs) {
-            if (reviewObjs.size() > 0) {
-                reviews.add(reviewObj.getReview());
-            }
-        }
-
-        String output = crunchify.listToJSON(reviewObjs);
+        String output = crunchify.listToJSONStrict(reviewObjs);
         return Response.status(200).entity(output).build();
     }
 
@@ -54,7 +47,6 @@ public class CanISteal {
         name = name.replace('+', ' ');
 
         List<Review> reviewObjs = new ArrayList<>();
-        List<String> reviews = new ArrayList<>();
         List<Business> businessesByID = businessDao.getByPropertyLike("name", name);
 
         for (Business business : businessesByID) {
@@ -62,13 +54,7 @@ public class CanISteal {
             reviewObjs = reviewDao.getByID("business", businessID);
         }
 
-        for (Review reviewObj : reviewObjs) {
-            if (reviewObjs.size() > 0) {
-                reviews.add(reviewObj.getReview());
-            }
-        }
-
-        String output = crunchify.listToJSON(reviews);
+        String output = crunchify.listToJSONStrict(reviewObjs);
         return Response.status(200).entity(output).build();
     }
 }

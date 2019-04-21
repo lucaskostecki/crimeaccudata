@@ -53,8 +53,8 @@
         isItSafe?
     </div>
     <div  class="card-body">
-        <h5 class="card-title" style="text-align: center;">PLACEHOLDER</h5>
-        <p class="card-text description">PLACEHOLDER</p>
+        <h5 class="card-title" style="text-align: center;">Find nearby criminal activity nearby!</h5>
+        <p class="card-text description">Enter a address(Madison area only) to find a series of activity in determined area, if there is any.</p>
         <div class="row">
             <input class="form-control offset-md-3 col-md-1" type="text" placeholder="GET" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
             <input class="form-control col-md-5" type="text" placeholder="/crimeaccudata/amisafe/{address}/{distance}" readonly style="display:inline-block;">
@@ -71,8 +71,8 @@
         canISteal?
     </div>
     <div  class="card-body">
-        <h5 class="card-title" style="text-align: center;">Find nearby criminal activity nearby!</h5>
-        <p class="card-text description">Enter a address(Madison area only) to find a series of activity in determined area, if there is any.</p>
+        <h5 class="card-title" style="text-align: center;">PLACEHOLDER</h5>
+        <p class="card-text description">PLACEHOLDER</p>
         <div class="row">
             <input class="form-control offset-md-3 col-md-1" type="text" placeholder="GET" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
             <input class="form-control col-md-5" type="text" placeholder="/crimeaccudata/" readonly style="display:inline-block;">
