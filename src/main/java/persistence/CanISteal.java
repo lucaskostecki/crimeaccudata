@@ -1,6 +1,5 @@
 package persistence;
 
-import com.google.gson.Gson;
 import controller.CrunchifyJSON;
 import entity.Business;
 import entity.Review;
@@ -15,6 +14,9 @@ import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The API Endpoint /canisteal
+ */
 @Path("/canisteal")
 public class CanISteal {
     private final Logger logger = LogManager.getLogger(this.getClass());
@@ -22,6 +24,12 @@ public class CanISteal {
     private GenericDao reviewDao = new persistence.GenericDao(Review.class);
     private CrunchifyJSON crunchify = new CrunchifyJSON();
 
+    /**
+     * Gets the reviews and ratings by business address
+     *
+     * @param address the address
+     * @return the json string of reviews and ratings
+     */
     @GET
     @Path("/address/{address}")
     @Produces("application/json")
@@ -40,6 +48,12 @@ public class CanISteal {
         return Response.status(200).entity(output).build();
     }
 
+    /**
+     * Gets the reviews and ratings by business name
+     *
+     * @param name the name
+     * @return the json string of reviews and ratings
+     */
     @GET
     @Path("/name/{name}")
     @Produces("application/json")
