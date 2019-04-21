@@ -39,7 +39,7 @@
                 <a class="nav-link" href="#isItSafe">isItSafe?</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#canISteal">canISteal?</a>
+                  <a class="nav-link" href="#canISteal">canISteal?</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#wheresTheMoney">wheresTheMoney?</a>
@@ -53,15 +53,15 @@
         isItSafe?
     </div>
     <div  class="card-body">
-        <h5 class="card-title" style="text-align: center;">PLACEHOLDER</h5>
-        <p class="card-text description">PLACEHOLDER</p>
+        <h5 class="card-title" style="text-align: center;">Find nearby criminal activity nearby!</h5>
+        <p class="card-text description">Enter a address(Madison area only) to find a series of activity in determined area, if there is any.</p>
         <div class="row">
             <input class="form-control offset-md-3 col-md-1" type="text" placeholder="GET" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
-            <input class="form-control col-md-5" type="text" placeholder="/crimeaccudata/" readonly style="display:inline-block;">
+            <input class="form-control col-md-5" type="text" placeholder="/crimeaccudata/amisafe/{address}/{distance}" readonly style="display:inline-block;">
         </div>
         <div class="row">
             <input class="form-control offset-md-3 col-md-1" type="text" placeholder="Output" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
-            <input class="form-control col-md-5" type="text" placeholder="??????" readonly style="display:inline-block;">
+            <input class="form-control col-md-5" type="text" placeholder="[{2929 N. Sherman Ave.=Robbery, 4301 Lien Road=Theft, Milwaukee Street=Theft, East Towne Mall=Theft, 4905 Commercial Ave.=Non-Residential Burglary}]" readonly style="display:inline-block;">
         </div>
     </div>
 </div>
@@ -103,5 +103,5 @@
 </div>
 
 
-</body>
+</body>gi
 </html>
