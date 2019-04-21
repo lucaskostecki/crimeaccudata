@@ -10,9 +10,19 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 import java.util.Map;
 
+/**
+ * The type Safe.
+ */
 @Path("/amisafe")
 public class Safe {
 
+    /**
+     * Gets local crime data.
+     *
+     * @param address the address
+     * @param radius  the radius
+     * @return the local crime data
+     */
     @GET
     @Path("/{address}/{radius}")
     @Produces("application/json")
