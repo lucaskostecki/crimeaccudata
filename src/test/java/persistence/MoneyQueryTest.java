@@ -8,7 +8,15 @@ import javax.ws.rs.core.Response;
 import static javax.ws.rs.core.Response.Status.OK;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * The type Money query test.
+ */
 public class MoneyQueryTest {
+    /**
+     * Gets money averages.
+     *
+     * @throws Exception the exception
+     */
     @Test
     void getMoneyAverages() throws Exception {
         Response.StatusType st = OK;
