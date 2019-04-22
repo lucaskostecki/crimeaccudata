@@ -2,6 +2,7 @@ package controller;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,10 +24,10 @@ public class CrunchifyJSON {
         return gson.toJson(list);
     }
 
-    public String mapToJson(Map map) {
-        GsonBuilder builder = new GsonBuilder();
-        Gson gson = builder.setPrettyPrinting().create();
+    public List JSONArrayToList(JsonArray jsonArray) {
+        Gson googleJson = new Gson();
+        ArrayList javaArray = googleJson.fromJson(jsonArray, ArrayList.class);
 
-        return gson.toJson(map);
+        return javaArray;
     }
 }

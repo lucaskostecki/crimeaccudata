@@ -1,6 +1,7 @@
-import amisafe.persistence.AmISafe;
+
 import persistence.CanISteal;
 import persistence.MoneyQuery;
+import persistence.Safe;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
@@ -16,7 +17,7 @@ public class CrimeAccuDataApplication extends Application {
 
         h.add(CanISteal.class);
         h.add(MoneyQuery.class);
-        h.add(AmISafe.class);
+        h.add(Safe.class);
         return h;
     }
 }

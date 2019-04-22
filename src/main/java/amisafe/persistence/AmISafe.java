@@ -2,7 +2,10 @@ package amisafe.persistence;
 
 import com.cityofmadison.maps.arcgis.Features;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.geocoder.api.Results;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -24,12 +27,15 @@ public class AmISafe {
      *
      * @param address the address
      * @param radius  the radius
-     * @return the map
+     * @return the JsonArray
      */
-    public Map crimeRadiusByAddress(String address, Double radius) {
+    public JsonArray crimeRadiusByAddress(String address, Double radius) {
         List<Double> currentLatLong = convertAddressToLatLong(address);
         Map<String, String> crimes = recentCrime();
         Map<String, String> crimeNearBy = new HashMap<>();
+        JsonArray jsonArray = new JsonArray();
+
+
         double distance = 0;
 
             for(Map.Entry<String, String> entry : crimes.entrySet()) {
@@ -38,9 +44,13 @@ public class AmISafe {
                 distance = distance(currentLatLong.get(0), currentLatLong.get(1), crimesLatLng.get(0), crimesLatLng.get(1));
                 if (distance <= radius) {
                     crimeNearBy.put(entry.getKey(), entry.getValue());
+                    JsonObject jsonObject = new JsonObject();
+                    jsonObject.addProperty("address", entry.getKey());
+                    jsonObject.addProperty("incident", entry.getValue());
+                    jsonArray.add(jsonObject);
                 }
             }
-        return  crimeNearBy;
+        return  jsonArray;
     }
 
 

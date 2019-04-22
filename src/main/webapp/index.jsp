@@ -56,12 +56,16 @@
         <h5 class="card-title" style="text-align: center;">Find nearby criminal activity nearby!</h5>
         <p class="card-text description">Enter an address(Madison area only) to find a series of activity in determined area, if there is any.</p>
         <div class="row">
-            <input class="form-control offset-md-3 col-md-1" type="text" placeholder="GET" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
-            <input class="form-control col-md-5" type="text" placeholder="/crimeaccudata/amisafe/{address}/{distance}" readonly style="display:inline-block;">
+            <input class="form-control col-md-2" type="text" placeholder="EXAMPLE" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
+            <input class="form-control col-md-10" type="text" placeholder="/crimeaccudata/amisafe/{address}/{distance}" readonly style="display:inline-block;">
         </div>
         <div class="row">
-            <input class="form-control offset-md-3 col-md-1" type="text" placeholder="Output" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
-            <input class="form-control col-md-5" type="text" placeholder="[{2929 N. Sherman Ave.=Robbery, 4301 Lien Road=Theft, Milwaukee Street=Theft, East Towne Mall=Theft, 4905 Commercial Ave.=Non-Residential Burglary}]" readonly style="display:inline-block;">
+            <input class="form-control col-md-2" type="text" placeholder="GET" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
+            <input class="form-control col-md-10" type="text" placeholder="/crimeaccudata/amisafe/1701 Wright St/2.0" readonly style="display:inline-block;">
+        </div>
+        <div class="row">
+            <input class="form-control col-md-2" type="text" placeholder="Output" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
+            <input class="form-control col-md-10" type="text" placeholder="[{2929 N. Sherman Ave.=Robbery, 4301 Lien Road=Theft, Milwaukee Street=Theft, East Towne Mall=Theft, 4905 Commercial Ave.=Non-Residential Burglary}]" readonly style="display:inline-block;">
         </div>
     </div>
 </div>
