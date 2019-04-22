@@ -59,4 +59,25 @@ public class GenericDao<T> {
         return entities;
     }
 
+    /**
+     * Gets entities by id not using like
+     *
+     * @param propertyName the property name
+     * @param value        the value to search on
+     * @return the list of entities matching criteria
+     */
+    public List<T> getByID(String propertyName, int value) {
+        Session session = getSession();
+
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<T> query = builder.createQuery( type );
+        Root<T> root = query.from( type );
+        Expression<String> propertyPath = root.get(propertyName);
+
+        query.where(builder.equal(propertyPath, value));
+
+        List<T> entities = session.createQuery( query ).getResultList();
+        session.close();
+        return entities;
+    }
 }
