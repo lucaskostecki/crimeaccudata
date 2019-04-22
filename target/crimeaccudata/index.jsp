@@ -36,13 +36,13 @@
     <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#isItSafe">isItSafe?</a>
+                <a class="nav-link" href="#isItSafe">Is It Safe?</a>
             </li>
             <li class="nav-item">
-                  <a class="nav-link" href="#canISteal">canISteal?</a>
+                  <a class="nav-link" href="#canISteal">Can I Steal?</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#wheresTheMoney">wheresTheMoney?</a>
+                <a class="nav-link" href="#wheresTheMoney">Wheres The Money?</a>
             </li>
         </ul>
     </div>
@@ -54,7 +54,11 @@
     </div>
     <div  class="card-body">
         <h5 class="card-title" style="text-align: center;">Find nearby criminal activity nearby!</h5>
+<<<<<<< HEAD
         <p class="card-text description">Enter a address(Madison area only) to find a series of activity in determined area, if there is any.</p>
+=======
+        <p class="card-text description">Enter an address(Madison area only) to find a series of activity in determined area, if there is any.</p>
+>>>>>>> master
         <div class="row">
             <input class="form-control offset-md-3 col-md-1" type="text" placeholder="GET" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
             <input class="form-control col-md-5" type="text" placeholder="/crimeaccudata/amisafe/{address}/{distance}" readonly style="display:inline-block;">
@@ -68,18 +72,44 @@
 
 <div id="canISteal" class="card offset-md-3 col-md-6"  style="padding : 0; margin-top: 5em;">
     <div class="card-header text-white bg-dark">
-        canISteal?
+        Can I Steal?
     </div>
     <div  class="card-body">
+<<<<<<< HEAD
         <h5 class="card-title" style="text-align: center;">PLACEHOLDER</h5>
         <p class="card-text description">PLACEHOLDER</p>
+=======
+        <h5 class="card-title" style="text-align: center;">Find out the hot places to steal from!</h5>
+        <p class="card-text description">Enter a business by street address or by name to find out what others are saying about their looting experience.</p>
+        <p class="card-text description">Businesses with more than one word for names and addresses should be separated with +</p>
+>>>>>>> master
         <div class="row">
-            <input class="form-control offset-md-3 col-md-1" type="text" placeholder="GET" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
-            <input class="form-control col-md-5" type="text" placeholder="/crimeaccudata/" readonly style="display:inline-block;">
+            <input class="form-control col-md-2" type="text" placeholder="EXAMPLE" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
+            <input class="form-control col-md-10" type="text" placeholder="/crimeaccudata/canisteal/address/{street_address}" readonly style="display:inline-block;">
         </div>
         <div class="row">
-            <input class="form-control offset-md-3 col-md-1" type="text" placeholder="Output" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
-            <input class="form-control col-md-5" type="text" placeholder="??????" readonly style="display:inline-block;">
+            <input class="form-control col-md-2" type="text" placeholder="GET" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
+            <input class="form-control col-md-10" type="text" placeholder="/crimeaccudata/canisteal/address/3710+E+Washington+Ave" readonly style="display:inline-block;">
+        </div>
+        <div class="row">
+            <input class="form-control col-md-2" type="text" placeholder="Output" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
+            <input class="form-control col-md-10" type="text" placeholder="[{'reviewID': 1,'review': 'A nice place, had a bit of cash','rating': 3}]" readonly style="display:inline-block;">
+        </div>
+
+
+        <br>
+        <br>
+        <div class="row">
+            <input class="form-control col-md-2" type="text" placeholder="EXAMPLE" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
+            <input class="form-control col-md-10" type="text" placeholder="/crimeaccudata/canisteal/name/{business_name}" readonly style="display:inline-block;">
+        </div>
+        <div class="row">
+            <input class="form-control col-md-2" type="text" placeholder="GET" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
+            <input class="form-control col-md-10" type="text" placeholder="/crimeaccudata/canisteal/name/walgreens" readonly style="display:inline-block;">
+        </div>
+        <div class="row">
+            <input class="form-control col-md-2" type="text" placeholder="Output" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
+            <input class="form-control col-md-10" type="text" placeholder="[{'reviewID': 1,'review': 'A nice place, had a bit of cash','rating': 3}]" readonly style="display:inline-block;">
         </div>
     </div>
 </div>

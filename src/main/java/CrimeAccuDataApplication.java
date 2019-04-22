@@ -1,3 +1,5 @@
+import amisafe.persistence.AmISafe;
+import persistence.CanISteal;
 import persistence.MoneyQuery;
 
 import javax.ws.rs.ApplicationPath;
@@ -11,9 +13,10 @@ public class CrimeAccuDataApplication extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         HashSet h = new HashSet<Class<?>>();
+
         h.add(CanISteal.class);
         h.add(MoneyQuery.class);
-        h.add(Safe.class);
+        h.add(AmISafe.class);
         return h;
     }
 }
