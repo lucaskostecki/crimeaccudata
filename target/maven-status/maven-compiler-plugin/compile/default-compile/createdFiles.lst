@@ -1,8 +1,16 @@
 com/geocoder/api/Results.class
 com/geocoder/api/Location.class
+<<<<<<< HEAD
 com/geonamesapi/PostalCodesItem.class
 com/geocoder/api/MapView.class
 com/geocoder/api/DisplayPosition.class
+=======
+com/geocoder/api/MapView.class
+com/geonamesapi/PostalCodesItem.class
+entity/Business.class
+com/geocoder/api/DisplayPosition.class
+persistence/CanISteal.class
+>>>>>>> 6260a68a0141f2a265b44aead9cdfc04ccccba14
 com/geocoder/api/ResultItem.class
 com/cityofmadison/maps/arcgis/FieldAliases.class
 persistence/MoneyQuery.class
@@ -16,6 +24,7 @@ com/geocoder/api/NavigationPositionItem.class
 amisafe/persistence/AmISafe.class
 persistence/SessionFactoryProvider.class
 com/geocoder/api/Address.class
+<<<<<<< HEAD
 persistence/GenericDao.class
 CrimeAccuDataApplication.class
 com/geonamesapi/Results.class
@@ -29,3 +38,18 @@ entity/Money.class
 com/cityofmadison/maps/arcgis/FieldsItem.class
 com/geocoder/api/TopLeft.class
 com/geocoder/api/MatchQuality.class
+=======
+CrimeAccuDataApplication.class
+persistence/GenericDao.class
+com/geonamesapi/Results.class
+com/geocoder/api/ViewItem.class
+com/cityofmadison/maps/arcgis/Features.class
+controller/CrunchifyJSON.class
+com/geocoder/api/AdditionalDataItem.class
+com/geocoder/api/BottomRight.class
+com/cityofmadison/maps/arcgis/FieldsItem.class
+entity/Money.class
+com/geocoder/api/TopLeft.class
+com/geocoder/api/MatchQuality.class
+entity/Review.class
+>>>>>>> 6260a68a0141f2a265b44aead9cdfc04ccccba14
