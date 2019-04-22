@@ -39,7 +39,7 @@ public class Safe {
         if(crime.size() > 0) {
             json = crunch.mapToJson(crime);
         } else {
-            json = "No Crime activity near " + radius + " distance.";
+            json = "No Crime activity near " + address + " at " + radius + " distance.";
         }
 
         return Response.status(200)
