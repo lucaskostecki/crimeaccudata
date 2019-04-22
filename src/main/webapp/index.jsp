@@ -113,12 +113,16 @@
         <h5 class="card-title" style="text-align: center;">Determine the wealthiest areas by a given zipcode</h5>
         <p class="card-text description">Enter a legitimate zipcode to find income averages in a 10 km radius of the submitted zipcode.</p>
         <div class="row">
-            <input class="form-control offset-md-3 col-md-1" type="text" placeholder="GET" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
-            <input class="form-control col-md-5" type="text" placeholder="/crimeaccudata/wheresTheMoney/{zipcode}" readonly style="display:inline-block;">
+            <input class="form-control col-md-2" type="text" placeholder="EXAMPLE" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
+            <input class="form-control col-md-10" type="text" placeholder="/crimeaccudata/wheresTheMoney/{zipcode}" readonly style="display:inline-block;">
         </div>
         <div class="row">
-            <input class="form-control offset-md-3 col-md-1" type="text" placeholder="Output" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
-            <input class="form-control col-md-5" type="text" placeholder="[{ id: 17555, zip: 53704, average: 65,357 }]" readonly style="display:inline-block;">
+            <input class="form-control col-md-2" type="text" placeholder="GET" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
+            <input class="form-control col-md-10" type="text" placeholder="/crimeaccudata/wheresTheMoney/53704" readonly style="display:inline-block;">
+        </div>
+        <div class="row">
+            <input class="form-control col-md-2" type="text" placeholder="Output" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
+            <input class="form-control col-md-10" type="text" placeholder="[{'id': 17555,'zip': 53704, 'average': 65,357}, {'id': 17560, zip: 53714, 'average': 62,008 }, {'id': 17554, 'zip': 53703, 'average': 39,242}]" readonly style="display:inline-block;">
         </div>
     </div>
 </div>

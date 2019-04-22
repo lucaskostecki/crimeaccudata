@@ -54,11 +54,7 @@
     </div>
     <div  class="card-body">
         <h5 class="card-title" style="text-align: center;">Find nearby criminal activity nearby!</h5>
-<<<<<<< HEAD
-        <p class="card-text description">Enter a address(Madison area only) to find a series of activity in determined area, if there is any.</p>
-=======
         <p class="card-text description">Enter an address(Madison area only) to find a series of activity in determined area, if there is any.</p>
->>>>>>> master
         <div class="row">
             <input class="form-control offset-md-3 col-md-1" type="text" placeholder="GET" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
             <input class="form-control col-md-5" type="text" placeholder="/crimeaccudata/amisafe/{address}/{distance}" readonly style="display:inline-block;">
@@ -75,14 +71,9 @@
         Can I Steal?
     </div>
     <div  class="card-body">
-<<<<<<< HEAD
-        <h5 class="card-title" style="text-align: center;">PLACEHOLDER</h5>
-        <p class="card-text description">PLACEHOLDER</p>
-=======
         <h5 class="card-title" style="text-align: center;">Find out the hot places to steal from!</h5>
         <p class="card-text description">Enter a business by street address or by name to find out what others are saying about their looting experience.</p>
         <p class="card-text description">Businesses with more than one word for names and addresses should be separated with +</p>
->>>>>>> master
         <div class="row">
             <input class="form-control col-md-2" type="text" placeholder="EXAMPLE" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
             <input class="form-control col-md-10" type="text" placeholder="/crimeaccudata/canisteal/address/{street_address}" readonly style="display:inline-block;">
@@ -122,16 +113,20 @@
         <h5 class="card-title" style="text-align: center;">Determine the wealthiest areas by a given zipcode</h5>
         <p class="card-text description">Enter a legitimate zipcode to find income averages in a 10 km radius of the submitted zipcode.</p>
         <div class="row">
-            <input class="form-control offset-md-3 col-md-1" type="text" placeholder="GET" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
-            <input class="form-control col-md-5" type="text" placeholder="/crimeaccudata/wheresTheMoney/{zipcode}" readonly style="display:inline-block;">
+            <input class="form-control col-md-2" type="text" placeholder="EXAMPLE" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
+            <input class="form-control col-md-10" type="text" placeholder="/crimeaccudata/wheresTheMoney/{zipcode}" readonly style="display:inline-block;">
         </div>
         <div class="row">
-            <input class="form-control offset-md-3 col-md-1" type="text" placeholder="Output" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
-            <input class="form-control col-md-5" type="text" placeholder="[{ id: 17555, zip: 53704, average: 65,357 }]" readonly style="display:inline-block;">
+            <input class="form-control col-md-2" type="text" placeholder="GET" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
+            <input class="form-control col-md-10" type="text" placeholder="/crimeaccudata/wheresTheMoney/53704" readonly style="display:inline-block;">
+        </div>
+        <div class="row">
+            <input class="form-control col-md-2" type="text" placeholder="Output" readonly style="display:inline-block; text-align:center;  font-weight: bold;">
+            <input class="form-control col-md-10" type="text" placeholder="[{'id': 17555,'zip': 53704, 'average': 65,357}, {'id': 17560, zip: 53714, 'average': 62,008 }, {'id': 17554, 'zip': 53703, 'average': 39,242}]" readonly style="display:inline-block;">
         </div>
     </div>
 </div>
 
 
-</body>gi
+</body>
 </html>
