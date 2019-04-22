@@ -1,5 +1,4 @@
 com/geocoder/api/Results.class
-persistence/CanISteal_old.class
 com/geocoder/api/Location.class
 com/geocoder/api/MapView.class
 com/geonamesapi/PostalCodesItem.class
