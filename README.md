@@ -9,7 +9,7 @@ The goal of Crime A.C.C.U. Data will provide users with crime data. We provide i
 *All data is lmited to the Madison area*
 
 ## Am I S.A.F.E.?
-#### *Safe. Are (you). Feeling. Enough.?*
+#### *persistence.Safe. Are (you). Feeling. Enough.?*
 This state of the art data service allows you to figure out if you are safe in a given area. Can't decide if you want to park your car somewhere overnight? This is the service for you.
 
 ## Can I S.T.E.A.L.?

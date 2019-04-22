@@ -4,6 +4,8 @@ import amisafe.persistence.AmISafe;
 import com.cityofmadison.maps.arcgis.Features;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.geocoder.api.Results;
+import com.google.gson.JsonArray;
+import controller.CrunchifyJSON;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.BeforeEach;
